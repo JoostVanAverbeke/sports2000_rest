@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<prgs:model xmlns:prgs="http://www.progress.com/caf/camel/component/prgrs" id="resourceModel">
+  <prgs:resource consumes="application/json" name="_hello" path="/hello" produces="application/json">
+    <prgs:operation consumes="application/json" idls="sports2000_rest/.services/AppServer/be/mips/hello/world/HelloWorldController.pidl::com.progress.openedge.pdt.bpmbindings" name="be.mips.hello.world.HelloWorldController..Hello" produces="application/json" verb="GET"/>
+  </prgs:resource>
+  <prgs:resource consumes="application/json" name="_say_hello" path="/say_hello" produces="application/json">
+    <prgs:operation consumes="application/json" idls="sports2000_rest/.services/AppServer/be/mips/hello/world/HelloWorldController.pidl::com.progress.openedge.pdt.bpmbindings" name="be.mips.hello.world.HelloWorldController..SayHello" produces="application/json" verb="GET">
+      <prgs:param name="UserName" type="QUERY"/>
+    </prgs:operation>
+  </prgs:resource>
+  <prgs:resource consumes="application/json" name="_orders" path="/orders" produces="application/json">
+    <prgs:operation consumes="application/json" idls="sports2000_rest/.services/AppServer/be/mips/sports2000/order/OrderController.pidl::com.progress.openedge.pdt.bpmbindings" name="be.mips.sports2000.order.OrderController..ReadOrderController" produces="application/json" verb="GET">
+      <prgs:param name="filter" type="QUERY"/>
+    </prgs:operation>
+  </prgs:resource>
+</prgs:model>
